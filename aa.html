@@ -1,0 +1,8 @@
+$thread_user_id = $row['thread_user_id'];
+$sql2 = "SELECT user_email FROM `users` where s_no = '$thread_user_id'"; 
+$result2 = mysqli_query($conn,$sql2);
+$row2 = mysqli_fetch_assoc($result2);
+echo $row2['user_email'];
+
+
+<p class = "font-weight-bold my-2"> ' . $row2['user_email'] . '</p>
